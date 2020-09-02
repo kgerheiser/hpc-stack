@@ -32,7 +32,7 @@ jasper:
   version: 2.0.15
 
 udunits:
-  build: YES
+  build: OFF
   version: 2.2.26
 
 hdf5:
@@ -56,7 +56,7 @@ netcdf:
   version_cxx: 4.3.1
 
 nccmp:
-  build: YES
+  build: NO
   version: 1.8.7.0
 
 nco:
@@ -64,17 +64,16 @@ nco:
   version: 4.9.3
 
 pio:
-  build: YES
+  build: NO
   version: 2.5.1
   enable_pnetcdf: NO
   enable_gptl: NO
 
 esmf:
-  build: YES
+  build: NO
   version: 8_1_0_beta_snapshot_21
   shared: YES
   enable_pnetcdf: NO
-  debug: NO
 
 gptl:
   build: NO
@@ -90,83 +89,93 @@ tau2:
 
 bacio:
   build: YES
-  version: v2.4.1
-  install_as: 2.4.1
+  version: v2.4.0
+  install_as: 2.4.0
+  openmp: OFF
 
 sigio:
   build: YES
-  version: v2.3.2
-  install_as: 2.3.2
+  version: v2.3.0
+  install_as: 2.3.0
+  openmp: OFF
 
 sfcio:
   build: YES
-  version: v1.4.1
-  install_as: 1.4.1
+  version: v1.4.0
+  install_as: 1.4.0
+  openmp: OFF
 
 gfsio:
   build: YES
-  version: v1.4.1
-  install_as: 1.4.1
+  version: v1.4.0
+  install_as: 1.4.0
+  openmp: OFF
 
 w3nco:
   build: YES
-  version: v2.4.1
-  install_as: 2.4.1
+  version: v2.4.0
+  install_as: 2.4.0
+  openmp: OFF
 
 sp:
   build: YES
-  version: v2.3.1
-  install_as: 2.3.1
-  openmp: OFF
+  version: develop
+  install_as: 2.3.0
+  openmp: ON
 
 ip:
   build: YES
-  version: v3.3.1
-  install_as: 3.3.1
+  version: v3.3.0
+  install_as: 3.3.0
   openmp: OFF
 
 ip2:
   build: NO
-  version: v1.1.1
-  install_as: 1.1.1
+  version: v1.1.0
+  install_as: 1.1.0
   openmp: OFF
 
 landsfcutil:
   build: YES
-  version: v2.4.1
-  install_as: 2.4.1
+  version: v2.4.0
+  install_as: 2.4.0
   openmp: OFF
 
 nemsio:
-  build: YES
-  version: v2.5.2
-  install_as: 2.5.2
-
-nemsiogfs:
   build: YES
   version: v2.5.1
   install_as: 2.5.1
   openmp: OFF
 
+nemsiogfs:
+  build: YES
+  version: v2.5.0
+  install_as: 2.5.0
+  openmp: OFF
+
 w3emc:
   build: YES
-  version: v2.7.1
-  install_as: 2.7.1
+  version: v2.7.0
+  install_as: 2.7.0
+  openmp: OFF
 
 g2:
   build: YES
-  version: v3.4.1
-  install_as: 3.4.1
+  version: v3.4.0
+  install_as: 3.4.0
+  openmp: OFF
 
 g2tmpl:
   build: YES
-  version: v1.9.1
-  install_as: 1.9.1
+  version: v1.9.0
+  install_as: 1.9.0
+  openmp: OFF
 
 crtm:
   build: YES
   version: v2.3.0
   install_as: 2.3.0
+  openmp: OFF
 
 nceppost:
   build: YES
@@ -176,14 +185,15 @@ nceppost:
 
 wrf_io:
   build: YES
-  version: v1.1.1-cmake-v2
+  version: v1.1.1-cmake
   install_as: 1.1.1
   openmp: OFF
 
 bufr:
   build: YES
-  version: bufr_v11.4.0
-  install_as: 11.4.0
+  version: bufr_v11.3.1.1
+  install_as: 11.3.1.1
+  openmp: OFF
 
 wgrib2:
   build: YES
@@ -197,6 +207,7 @@ prod_util:
   build: YES
   version: develop
   install_as: develop
+  openmp: OFF
 
 grib_util:
   build: YES
