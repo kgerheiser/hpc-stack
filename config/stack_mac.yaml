@@ -119,20 +119,20 @@ w3nco:
 
 sp:
   build: YES
-  version: develop
-  install_as: 2.3.0
+  version: v2.3.2
+  install_as: 2.3.2
   openmp: ON
 
 ip:
   build: YES
-  version: v3.3.0
-  install_as: 3.3.0
+  version: v3.3.2
+  install_as: 3.3.2
   openmp: OFF
 
 ip2:
   build: NO
-  version: v1.1.0
-  install_as: 1.1.0
+  version: v1.1.2
+  install_as: 1.1.2
   openmp: OFF
 
 landsfcutil:
@@ -149,8 +149,8 @@ nemsio:
 
 nemsiogfs:
   build: YES
-  version: v2.5.0
-  install_as: 2.5.0
+  version: v2.5.2
+  install_as: 2.5.2
   openmp: OFF
 
 w3emc:
@@ -205,12 +205,12 @@ wgrib2:
 
 prod_util:
   build: YES
-  version: develop
-  install_as: develop
+  version: v1.2.1
+  install_as: 1.2.1
   openmp: OFF
 
 grib_util:
   build: YES
-  version: develop
-  install_as: develop
+  version: v1.2.1
+  install_as: 1.2.1
   openmp: OFF
