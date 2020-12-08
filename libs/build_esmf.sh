@@ -69,7 +69,7 @@ gitURL="https://github.com/kgerheiser/esmf.git"
 
 cd ${HPC_STACK_ROOT}/${PKGDIR:-"pkg"}
 
-software="ESMF_$version"
+software="$version"
 # ESMF does not support out of source builds; clean out the clone
 [[ -d $software ]] && ( echo "$software exists, cleaning ..."; rm -rf $software )
 [[ -d $software ]] || ( git clone -b $software $gitURL $software )
