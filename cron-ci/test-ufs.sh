@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/bin/bash
 set -eux
 
 cd ${HPC_DOWNLOAD_PATH}
