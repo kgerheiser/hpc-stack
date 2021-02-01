@@ -70,6 +70,8 @@ export EXTRA_LDFLAGS="$AM_LDFLAGS $EXTRA_LIBS"
 export HDF5_LDFLAGS="-L$HDF5_ROOT/lib -lhdf5_hl -lhdf5"
 export NETCDF_LDFLAGS="-L$NETCDF_ROOT/lib"
 
+export CPPFLAGS="-I$NETCDF_ROOT/include"
+
 if [[ $enable_pnetcdf =~ [yYtT] ]]; then
     PNETCDF_LDFLAGS="-L$PNETCDF_LIBRARIES"
     PNETCDF_FLAGS=""
@@ -87,7 +89,6 @@ fi
 export LDFLAGS="$PNETCDF_LDFLAGS $NETCDF_LDFLAGS $HDF5_LDFLAGS $EXTRA_LDFLAGS"
 
 ../configure --prefix=$prefix \
-             --enable-netcdf-integration \
              --enable-fortran \
              $TIMING_FLAGS $PNETCDF_FLAGS
              
