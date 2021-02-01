@@ -42,7 +42,7 @@ software=$name-$repo-$version
 cd ${HPC_STACK_ROOT}/${PKGDIR:-"pkg"}
 [[ -d $software ]] || git clone https://github.com/$repo/$name.git $software
 [[ -d $software ]] && cd $software || ( echo "$software does not exist, ABORT!"; exit 1 )
-git fetch --tags
+
 git checkout $version
 [[ ${DOWNLOAD_ONLY} =~ [yYtT] ]] && exit 0
 [[ -d build ]] && $SUDO rm -rf build
