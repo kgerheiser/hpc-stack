@@ -56,6 +56,7 @@ fi
 
 tar -xf ${software}.tar.gz
 
+
 [[ -d $software ]] && cd $software || ( echo "$software does not exist, ABORT!"; exit 1 )
 
 [[ ${DOWNLOAD_ONLY} =~ [yYtT] ]] && exit 0
