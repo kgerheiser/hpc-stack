@@ -52,11 +52,11 @@ if [[ "$version" = "2.5.1" ]]; then
 else
   branch=pio$(echo $version | sed -e 's/\./_/g')
 fi
-#[[ -d $software ]] || git clone https://github.com/NCAR/ParallelIO $software
-[[ -d $software ]] || $WGET https://github.com/NCAR/ParallelIO/releases/download/$branch/pio-${version}.tar.gz;
+[[ -f $software.tar.gz ]] || $WGET https://github.com/NCAR/ParallelIO/releases/download/$branch/${software}.tar.gz
 
-tar -xf pio-${version}.tar.gz
-[[ -d $software ]] && cd pio-${version} || ( echo "$software does not exist, ABORT!"; exit 1 )
+tar -xf ${software}.tar.gz
+
+[[ -d $software ]] && cd $software || ( echo "$software does not exist, ABORT!"; exit 1 )
 
 [[ ${DOWNLOAD_ONLY} =~ [yYtT] ]] && exit 0
 [[ -d build ]] && rm -rf build
